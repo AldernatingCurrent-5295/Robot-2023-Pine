@@ -1,0 +1,30 @@
+CAN_Ports (WIP/On Test Robot)
+Port    Device          Descrption
+----------------------------------------------------------------------
+1       CANSparkMax     Right Front Motor
+2       CANSparkMax     Right Rear Motor
+3       CANSparkMax     Left Front Motor
+4       CANSparkMax     Left Rear Motor
+Unk     CANSparkMax     Elevator Motor
+Unk     CANSparkMax     Extension Motor
+
+
+Controllers (WIP/Ideas)
+Button          Function
+----------------------------------------------------------------------
+A               Unbound
+B               Unbound
+X               Unbound
+Y               Unbound
+DPAD UP         Unbound
+DPAD DOWN       Unbound
+DPAD LEFT       Unbound
+DPAD RIGHT      Unbound
+RB              Unbound
+RT              Unbound
+LB              Unbound
+LT              Unbound
+RSTICK X        Unbound
+RSTICK Y        Tank Drive
+LSTICK X        Unbound
+LSTICK Y        Tank Drive

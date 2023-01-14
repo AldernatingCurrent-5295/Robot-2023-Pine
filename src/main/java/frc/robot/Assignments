@@ -6,8 +6,14 @@ Port    Device          Descrption
 3       CANSparkMax     Left Front Motor
 4       CANSparkMax     Left Rear Motor
 Unk     CANSparkMax     Elevator Motor
-Unk     CANSparkMax     Extension Motor
+Unk     CANSparkMax     Extension 
 
+Misc_Ports (WIP/On Test Robot)
+Port    Device          Description
+----------------------------------------------------------------------
+0       Solenoid        Game Piece Capture
+Eth     Limelight       Reflective Tape Detection
+USB     Camera          April Tag Detection
 
 Controllers (WIP/Ideas)
 Button          Function

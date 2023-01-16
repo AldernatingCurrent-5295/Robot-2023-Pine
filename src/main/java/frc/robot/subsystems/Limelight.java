@@ -15,6 +15,9 @@ public class Limelight extends SubsystemBase{
 	NetworkTableEntry		ty = networkTable.getEntry("ty");
 	NetworkTableEntry		ta = networkTable.getEntry("ta");
 
+    /**
+     * Subsystem for interacting with limelight through networktables
+     */
     public Limelight() {
 
     }
@@ -26,5 +29,17 @@ public class Limelight extends SubsystemBase{
 
         SmartDashboard.putNumber("LimelightX", x);
         SmartDashboard.putNumber("LimelightY", y);
+    }
+
+    public boolean hasTarget() {
+        return tv.getBoolean(false);
+    }
+
+    public double getTargetX() {
+        return tx.getDouble(0.0);
+    }
+
+    public double getTargetY() {
+        return ty.getDouble(0.0);
     }
 }

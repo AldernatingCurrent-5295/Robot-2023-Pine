@@ -30,16 +30,23 @@ public class Drivetrain extends SubsystemBase {
 
     private final DifferentialDrive m_Drive = new DifferentialDrive(m_lMotorControllerGroup, m_rMotorControllerGroup);
 
-
+    /**
+     * Subsystem for interacting with robot's drivetrain
+     */
     public Drivetrain() {
         boolean inv = false;
         rbMotor.setInverted(inv);
         lbMotor.setInverted(inv);
 
-        m_lMotorControllerGroup.setInverted(true);
+        m_lMotorControllerGroup.setInverted(false);
+        m_rMotorControllerGroup.setInverted(true);
     }
 
     public void tankDrive(Double rPwr, Double lPwr, boolean squareInputs) {
-            m_Drive.tankDrive(rPwr, lPwr, squareInputs);
+        m_Drive.tankDrive(rPwr, lPwr, squareInputs);
+    }
+
+    public void arcadeDrive(double pwr, double rot) {
+        m_Drive.arcadeDrive(pwr, rot);
     }
 }

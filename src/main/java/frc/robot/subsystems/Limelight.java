@@ -30,7 +30,6 @@ public class Limelight extends SubsystemBase{
         SmartDashboard.putNumber("LimelightX", x);
         SmartDashboard.putNumber("LimelightY", y);
     }
-<<<<<<< HEAD
 
     public boolean hasTarget() {
         return tv.getBoolean(false);
@@ -44,6 +43,3 @@ public class Limelight extends SubsystemBase{
         return ty.getDouble(0.0);
     }
 }
-=======
-}
->>>>>>> 8cfe7f26681ec34f155ec96b91f27642c7f5afee

@@ -40,7 +40,9 @@ public class LimelightDrive extends CommandBase{
         // if (!limelight.hasTarget()) { return; }
 
         double turnPower = limelight.getTargetX() / 30;
-
+        // boolean gzero = turnPower > 0;
+        // turnPower = Math.pow(turnPower, 2) * (gzero ? 1:-1);
+        
         drivetrain.arcadeDrive(
             drivePower.getAsDouble(),
             turnPower

@@ -5,6 +5,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants.LimelightConfig;
 
 public class Limelight extends SubsystemBase{
     
@@ -29,6 +30,8 @@ public class Limelight extends SubsystemBase{
 
         SmartDashboard.putNumber("LimelightX", x);
         SmartDashboard.putNumber("LimelightY", y);
+        SmartDashboard.putNumber("Target Distance", estimateDistance());
+
     }
 
     public boolean hasTarget() {
@@ -39,7 +42,22 @@ public class Limelight extends SubsystemBase{
         return tx.getDouble(0.0);
     }
 
-    public double getTargetY() {
+    public double  getTargetY() {
         return ty.getDouble(0.0);
+    }
+
+    /*
+     * Estimated distance from limelight lens to pole goal.
+     */
+    public double estimateDistance() {
+        
+        double tVerticalAngle = getTargetY();
+        double angleToGoalDegrees = LimelightConfig.llAngle + tVerticalAngle;
+        // SmartDashboard.putNumber("Degrees", angleToGoalDegrees);
+        double angleToGoalRadians = angleToGoalDegrees * (3.14159 / 180.0);
+        // SmartDashboard.putNumber("Radians", angleToGoalRadians);
+        double dist = (LimelightConfig.goalElevation - LimelightConfig.llElevation) / Math.tan(angleToGoalRadians);
+
+        return dist;
     }
 }

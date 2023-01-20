@@ -18,7 +18,7 @@ USB     Camera          April Tag Detection
 Controllers (WIP/Ideas)
 Button          Function
 ----------------------------------------------------------------------
-A               Unbound
+A               Limelight Assisted Drive
 B               Unbound
 X               Unbound
 Y               Unbound
@@ -33,4 +33,4 @@ LT              Unbound
 RSTICK X        Unbound
 RSTICK Y        Tank Drive
 LSTICK X        Unbound
-LSTICK Y        Tank Drive
+LSTICK Y        Tank Drive, Limelight drive throttle

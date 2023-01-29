@@ -29,8 +29,8 @@ public class TankDrive extends CommandBase{
     public void execute() {
         drivetrain.tankDrive(
             leftPower.getAsDouble(), 
-            rightPower.getAsDouble(), 
-            true
+            rightPower.getAsDouble(),
+            false
         );
     }
 }

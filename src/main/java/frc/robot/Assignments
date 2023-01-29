@@ -6,7 +6,7 @@ Port    Device          Descrption
 3       CANSparkMax     Left Front Motor
 4       CANSparkMax     Left Rear Motor
 Unk     CANSparkMax     Elevator Motor
-Unk     CANSparkMax     Extension 
+Unk     CANSparkMax     Extension (Possibly Solenoid)
 
 Misc_Ports (WIP/On Test Robot)
 Port    Device          Description
@@ -19,7 +19,7 @@ Controllers (WIP/Ideas)
 Button          Function
 ----------------------------------------------------------------------
 A               Limelight Assisted Drive
-B               Unbound
+B               Camera Assisted Drive
 X               Unbound
 Y               Unbound
 DPAD UP         Unbound

@@ -3,7 +3,7 @@
 ### _To Do:_
 ***
 - [x] Limelight Detection
-- [ ] Camera Detection
+- [x] Camera Detection
 - [ ] Autonomous
    * [ ] Move
    * [ ] Place Scoring Element

@@ -8,6 +8,10 @@ public final class Constants {
         public static final int lbMotorID = 4;
     }
 
+    public final class MechanismConfig {
+        public static final int liftMotorID = 5;
+    }
+
     /*
      * All measurements in inches and degrees
      */

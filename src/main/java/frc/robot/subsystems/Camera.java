@@ -39,7 +39,7 @@ public class Camera extends SubsystemBase {
 
   @Override
   public void periodic() {
-    SmartDashboard.putNumber("ID 1 X", getTagCX(1));
+    // SmartDashboard.putNumber("ID 1 X", getTagCX(1));
   }
 
   private void AprilTagDetectionThreadProc() {

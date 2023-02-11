@@ -5,9 +5,9 @@
 - [x] Limelight Detection
 - [x] Camera Detection
 - [ ] Autonomous
-   * [ ] Move
-   * [ ] Place Scoring Element
+   * [ ] Score Pre-Loaded Game Piece
+   * [ ] Score Field Game Piece
    * [ ] Balance
    * [ ] Autonomous Alternatives
-     *  Only 1 (Move/Score/Balance)
+     *  Only 1 (Score/Balance)
      *  3 Starting Positions

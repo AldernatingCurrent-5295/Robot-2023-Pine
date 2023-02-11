@@ -1,8 +1,12 @@
 package frc.robot.subsystems;
 
+import com.kauailabs.navx.frc.AHRS;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import com.revrobotics.RelativeEncoder;
 
+import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.SerialPort;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -29,6 +33,13 @@ public class Drivetrain extends SubsystemBase {
             lbMotor
         );
 
+    private final AHRS gyroAhrs = new AHRS(SPI.Port.kMXP);
+
+    private final RelativeEncoder rfEncoder = rfMotor.getEncoder();
+    // private final RelativeEncoder rbEncoder = rbMotor.getEncoder();
+    private final RelativeEncoder lfEncoder = lfMotor.getEncoder();
+    // private final RelativeEncoder lbEncoder = lbMotor.getEncoder();
+
     private final DifferentialDrive m_Drive = new DifferentialDrive(m_lMotorControllerGroup, m_rMotorControllerGroup);
 
     /**
@@ -45,12 +56,22 @@ public class Drivetrain extends SubsystemBase {
 
     @Override
     public void periodic() {
+
+        SmartDashboard.putNumber("Right Enc R8", rfEncoder.getVelocity());
+        SmartDashboard.putNumber("Left Enc R8", lfEncoder.getVelocity());
+
+        SmartDashboard.putNumber("Gyro", getHeading());
+
         double[] motor_values = new double[4];
         motor_values[0] = lfMotor.get();
         motor_values[1] = rfMotor.get();
         motor_values[2] = lbMotor.get();
         motor_values[3] = rbMotor.get();
         SmartDashboard.putNumberArray("RobotDrive Motors", motor_values);
+    }
+
+    public double getHeading() {
+        return gyroAhrs.getCompassHeading();
     }
 
     public void tankDrive(Double rPwr, Double lPwr, boolean squareInputs) {

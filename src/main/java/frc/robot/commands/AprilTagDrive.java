@@ -2,7 +2,6 @@ package frc.robot.commands;
 
 import java.util.function.DoubleSupplier;
 
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Camera;
 import frc.robot.subsystems.Drivetrain;
@@ -42,15 +41,13 @@ public class AprilTagDrive extends CommandBase{
     @Override
     public void execute() {
         double turnPower = (camera.getTagCX(tagID) - .5) * 2; // -0.5 * 2 centers it because its from [0, 1]
-        // SmartDashboard.putNumber("Power b4", turnPower);
         boolean gzero = turnPower > 0;
         turnPower = Math.pow(turnPower, 2) * (gzero ? 1:-1);
         turnPower = mathutils.Clamp(turnPower, .3, -.3);
-        // SmartDashboard.putNumber("Power 4fter", turnPower);
         
         drivetrain.arcadeDrive(
-            drivePower.getAsDouble(),
-            turnPower
+            -drivePower.getAsDouble(),
+            -turnPower
         );
     }
 }

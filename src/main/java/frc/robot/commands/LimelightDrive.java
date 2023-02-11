@@ -44,8 +44,8 @@ public class LimelightDrive extends CommandBase{
         // turnPower = Math.pow(turnPower, 2) * (gzero ? 1:-1);
         
         drivetrain.arcadeDrive(
-            drivePower.getAsDouble(),
-            turnPower
+            -drivePower.getAsDouble(),
+            -turnPower
         );
     }
 }

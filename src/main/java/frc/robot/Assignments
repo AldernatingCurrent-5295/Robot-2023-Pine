@@ -30,7 +30,7 @@ RB              Unbound
 RT              Unbound
 LB              Unbound
 LT              Unbound
-RSTICK X        Unbound
-RSTICK Y        Tank Drive
+RSTICK X        Arcade Drive Rotate
+RSTICK Y        Unbound
 LSTICK X        Unbound
-LSTICK Y        Tank Drive, Limelight drive throttle
+LSTICK Y        Arcade Drive Throttle, Limelight drive throttle
